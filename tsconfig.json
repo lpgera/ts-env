@@ -3,6 +3,7 @@
     "target": "es2018",
     "module": "commonjs",
     "lib": ["es2020"],
+    "esModuleInterop": true,
     "downlevelIteration": true,
     "strict": true,
     "noImplicitAny": true,
