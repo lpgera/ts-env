@@ -1,0 +1,41 @@
+{
+  "name": "ts-env",
+  "version": "1.0.0",
+  "description": "An environment variable reader for TypeScript",
+  "main": "index.ts",
+  "dependencies": {},
+  "peerDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^25.2.1",
+    "@types/node": "^13.13.2",
+    "husky": "^4.2.5",
+    "jest": "^25.4.0",
+    "prettier": "^2.0.5",
+    "pretty-quick": "^2.0.1",
+    "ts-jest": "^25.4.0",
+    "typescript": "^3.8.3"
+  },
+  "scripts": {
+    "test": "jest --coverage",
+    "test:watch": "jest --coverage --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lpgera/ts-env.git"
+  },
+  "keywords": [
+    "typescript",
+    "env",
+    ".env",
+    "environment",
+    "variables"
+  ],
+  "author": "lpgera",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lpgera/ts-env/issues"
+  },
+  "homepage": "https://github.com/lpgera/ts-env#readme"
+}
