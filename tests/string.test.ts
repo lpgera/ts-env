@@ -1,4 +1,4 @@
-import string from '../lib/string'
+import string from '../src/string'
 
 describe('string()', () => {
   const key = 'foo'

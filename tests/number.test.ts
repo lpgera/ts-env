@@ -1,4 +1,4 @@
-import number from '../lib/number'
+import number from '../src/number'
 
 describe('number()', () => {
   const key = 'foo'

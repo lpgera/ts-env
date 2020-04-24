@@ -1,9 +1,9 @@
-import string from './lib/string'
-import stringOrThrow from './lib/stringOrThrow'
-import boolean from './lib/boolean'
-import booleanOrThrow from './lib/booleanOrThrow'
-import number from './lib/number'
-import numberOrThrow from './lib/numberOrThrow'
+import string from './src/string'
+import stringOrThrow from './src/stringOrThrow'
+import boolean from './src/boolean'
+import booleanOrThrow from './src/booleanOrThrow'
+import number from './src/number'
+import numberOrThrow from './src/numberOrThrow'
 
 export default {
   string,
