@@ -42,18 +42,18 @@ Throws an error if it's `undefined`.
 
 Reads a boolean value from `process.env[key]`.
 "0" and "false" are considered `false`, "1" and "true" are considered `true`.
-Everything else is will be read as `undefined`.
+Everything else will be read as `undefined`.
 
 ### .booleanOrThrow(key: string): boolean
 
 Reads a boolean value from `process.env[key]`.
 "0" and "false" are considered `false`, "1" and "true" are considered `true`.
-Everything else will result in an error being thrown.
+Everything else will result in an error thrown.
 
 ### .number(key: string): number | undefined
 
 Reads a number value from `process.env[key]`.
-If a number cannot be parsed, it will return undefined.
+If a number cannot be parsed, it will return `undefined`.
 
 ### .numberOrThrow(key: string): number
 
