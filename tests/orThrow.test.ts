@@ -5,7 +5,7 @@ describe('orThrow()', () => {
     const key = 'foo'
     const value = 'bar'
     const readFunction = jest.fn().mockReturnValue(value)
-    orThrow(readFunction)(key)
+    orThrow(readFunction, 'typeString')(key)
     expect(readFunction).toHaveBeenCalledWith(key)
   })
 
@@ -13,13 +13,15 @@ describe('orThrow()', () => {
     const key = 'foo'
     const value = 'bar'
     const readFunction = jest.fn().mockReturnValue(value)
-    const returnValue = orThrow(readFunction)(key)
+    const returnValue = orThrow(readFunction, 'typeString')(key)
     expect(returnValue).toEqual(value)
   })
 
   it(`throws if the return value of readFunction is undefined`, () => {
     const key = 'foo'
     const readFunction = jest.fn().mockReturnValue(undefined)
-    expect(() => orThrow(readFunction)(key)).toThrow()
+    expect(() => orThrow(readFunction, 'typeString')(key)).toThrowError(
+      `Couldn't read typeString value from process.env.${key}`
+    )
   })
 })
