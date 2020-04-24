@@ -1,6 +1,6 @@
 {
-  "name": "ts-env",
-  "version": "0.1.0",
+  "name": "@lpgera/ts-env",
+  "version": "0.1.2",
   "description": "An environment variable reader for TypeScript",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,6 +21,7 @@
   "scripts": {
     "prepare": "rm -rf dist && tsc",
     "prepublishOnly": "npm run test",
+    "postversion": "git push && git push --tags",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll"
   },

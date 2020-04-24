@@ -8,16 +8,16 @@ This package requires `typescript` to be installed.
 
 ```bash
 # with npm
-npm install ts-env
+npm install @lpgera/ts-env
 
 # or with Yarn
-yarn add ts-env
+yarn add @lpgera/ts-env
 ```
 
 ## Usage example
 
 ```typescript
-import tsEnv from 'ts-env'
+import tsEnv from '@lpgera/ts-env'
 
 // Type of optionalString will be: string | undefined
 const optionalString = tsEnv.string('STRING')
