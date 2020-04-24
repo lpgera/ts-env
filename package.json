@@ -19,7 +19,8 @@
     "typescript": "^3.8.3"
   },
   "scripts": {
-    "build": "tsc",
+    "prepare": "rm -rf dist && tsc",
+    "prepublishOnly": "npm run test",
     "test": "jest --coverage",
     "test:watch": "jest --coverage --watchAll"
   },
@@ -39,5 +40,8 @@
   "bugs": {
     "url": "https://github.com/lpgera/ts-env/issues"
   },
-  "homepage": "https://github.com/lpgera/ts-env#readme"
+  "homepage": "https://github.com/lpgera/ts-env#readme",
+  "files": [
+    "dist"
+  ]
 }
