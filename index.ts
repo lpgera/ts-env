@@ -5,7 +5,7 @@ import booleanOrThrow from './src/booleanOrThrow'
 import number from './src/number'
 import numberOrThrow from './src/numberOrThrow'
 
-export default {
+const tsEnv = {
   string,
   stringOrThrow,
   boolean,
@@ -13,3 +13,5 @@ export default {
   number,
   numberOrThrow,
 }
+
+export default tsEnv
