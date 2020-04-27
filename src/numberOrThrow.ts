@@ -1,4 +1,4 @@
 import number from './number'
 import orThrow from './orThrow'
 
-export default orThrow(number, 'number')
+export default (key: string) => orThrow(number, 'number')(key)
