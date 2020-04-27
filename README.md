@@ -2,6 +2,8 @@
 
 An environment variable reader for TypeScript. Simple and minimal. ✨
 
+[![Actions Status](https://github.com/lpgera/ts-env/workflows/Tests/badge.svg)](https://github.com/lpgera/ts-env/actions)
+
 ## Install
 
 This package requires `typescript` to be installed.
