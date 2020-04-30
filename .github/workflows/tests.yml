@@ -7,5 +7,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Run Jest
+      - name: Jest
         uses: stefanoeb/jest-action@1.0.2
+        with:
+          jestArgs: --coverage
+      - name: Coveralls
+        uses: coverallsapp/github-action@v1.1.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
