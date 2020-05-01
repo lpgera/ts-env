@@ -3,9 +3,10 @@
 An environment variable reader for TypeScript. Simple and minimal. ✨
 
 [![npm package](https://img.shields.io/npm/v/%40lpgera%2Fts-env.svg)](https://www.npmjs.com/package/@lpgera/ts-env)
-[![Actions Status](https://github.com/lpgera/ts-env/workflows/Tests/badge.svg)](https://github.com/lpgera/ts-env/actions)
+[![Actions Status](https://img.shields.io/github/workflow/status/lpgera/ts-env/Tests)](https://github.com/lpgera/ts-env/actions)
 [![Coverage Status](https://coveralls.io/repos/github/lpgera/ts-env/badge.svg?branch=master)](https://coveralls.io/github/lpgera/ts-env?branch=master)
-[![Dependencies](https://img.shields.io/david/lpgera/ts-env)]()
+[![Dependencies](https://img.shields.io/david/lpgera/ts-env)](https://github.com/lpgera/ts-env)
+[![Size](https://img.shields.io/bundlephobia/minzip/@lpgera/ts-env)](https://bundlephobia.com/result?p=@lpgera/ts-env)
 
 ## Install
 
@@ -19,17 +20,31 @@ npm install @lpgera/ts-env
 yarn add @lpgera/ts-env
 ```
 
-## Usage example
+## Example
+
+Reading different types of environment variables without `ts-env`:
+
+```typescript
+if (!process.env.PORT) {
+  throw new Error('process.env.PORT is missing')
+}
+if (!process.env.DATABASE) {
+  throw new Error('process.env.DATABASE is missing')
+}
+
+const port: number = parseInt(process.env.PORT)
+const database: string = process.env.DATABASE
+const debug: boolean | undefined = process.env.DEBUG === 'true'
+```
+
+Doing the same with `ts-env`:
 
 ```typescript
 import tsEnv from '@lpgera/ts-env'
 
-// Type of optionalString will be: string | undefined
-const optionalString = tsEnv.string('STRING')
-
-// Type of requiredString will be: string
-// If a string cannot be read, an error will be thrown
-const requiredString = tsEnv.stringOrThrow('STRING')
+const port: number = tsEnv.numberOrThrow('PORT')
+const database: string = tsEnv.stringOrThrow('DATABASE')
+const debug: boolean | undefined = tsEnv.boolean('DEBUG')
 ```
 
 ## API
