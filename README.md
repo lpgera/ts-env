@@ -2,11 +2,12 @@
 
 An environment variable reader for TypeScript. Simple and minimal. ✨
 
-[![npm package](https://img.shields.io/npm/v/%40lpgera%2Fts-env.svg)](https://www.npmjs.com/package/@lpgera/ts-env)
-[![Actions Status](https://img.shields.io/github/workflow/status/lpgera/ts-env/Tests)](https://github.com/lpgera/ts-env/actions)
+[![npm package](https://img.shields.io/npm/v/@lpgera/ts-env.svg)](https://www.npmjs.com/package/@lpgera/ts-env)
+[![Actions Status](https://img.shields.io/github/workflow/status/lpgera/ts-env/Tests.svg)](https://github.com/lpgera/ts-env/actions)
 [![Coverage Status](https://coveralls.io/repos/github/lpgera/ts-env/badge.svg?branch=master)](https://coveralls.io/github/lpgera/ts-env?branch=master)
-[![Dependencies](https://img.shields.io/david/lpgera/ts-env)](https://github.com/lpgera/ts-env)
-[![Size](https://img.shields.io/bundlephobia/minzip/@lpgera/ts-env)](https://bundlephobia.com/result?p=@lpgera/ts-env)
+[![Dependencies](https://img.shields.io/david/lpgera/ts-env.svg)](https://github.com/lpgera/ts-env)
+[![Size](https://img.shields.io/bundlephobia/minzip/@lpgera/ts-env.svg)](https://bundlephobia.com/result?p=@lpgera/ts-env)
+[![License](https://img.shields.io/npm/l/@lpgera/ts-env.svg)](https://www.npmjs.com/package/@lpgera/ts-env)
 
 ## Install
 
