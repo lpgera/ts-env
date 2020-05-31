@@ -80,3 +80,22 @@ If a number cannot be parsed, it will return `undefined`.
 
 Reads a number value from `process.env[key]`.
 If a number cannot be parsed, an error will be thrown.
+
+### .stringArray(key: string, separator: string = ','): string[] | undefined
+
+Reads a string array from `process.env[key]`.
+
+### .stringArrayOrThrow(key: string, separator: string = ','): string[]
+
+Reads a string array from `process.env[key]`.
+Throws an error if it's `undefined`.
+
+### .numberArray(key: string, separator: string = ','): number[] | undefined
+
+Reads a number array from `process.env[key]`.
+If any item cannot be parsed, it will return `undefined`.
+
+### .numberArrayOrThrow(key: string, separator: string = ','): number[]
+
+Reads a number array from `process.env[key]`.
+If any item cannot be parsed, an error will be thrown.
