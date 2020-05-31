@@ -6,10 +6,11 @@ jest.spyOn(stringModule, 'default')
 jest.spyOn(orThrowModule, 'default')
 
 describe('.stringOrThrow()', () => {
-  it('does something', () => {
-    process.env.foo = 'bar'
-    stringOrThrow('foo')
+  it('calls the appropriate functions', () => {
+    const key = 'foo'
+    process.env[key] = 'bar'
+    stringOrThrow(key)
     expect(orThrowModule.default).toHaveBeenCalled()
-    expect(stringModule.default).toHaveBeenCalled()
+    expect(stringModule.default).toHaveBeenCalledWith(key)
   })
 })

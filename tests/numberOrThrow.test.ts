@@ -6,10 +6,11 @@ jest.spyOn(numberModule, 'default')
 jest.spyOn(orThrowModule, 'default')
 
 describe('.numberOrThrow()', () => {
-  it('does something', () => {
-    process.env.foo = '1'
-    numberOrThrow('foo')
+  it('calls the appropriate functions', () => {
+    const key = 'foo'
+    process.env[key] = '1'
+    numberOrThrow(key)
     expect(orThrowModule.default).toHaveBeenCalled()
-    expect(numberModule.default).toHaveBeenCalled()
+    expect(numberModule.default).toHaveBeenCalledWith(key)
   })
 })
