@@ -24,4 +24,20 @@ describe('tsEnv', () => {
   it('has .numberOrThrow() defined', () => {
     expect(tsEnv.numberOrThrow).toEqual(expect.any(Function))
   })
+
+  it('has .stringArray() defined', () => {
+    expect(tsEnv.stringArray).toEqual(expect.any(Function))
+  })
+
+  it('has .stringArrayOrThrow() defined', () => {
+    expect(tsEnv.stringArrayOrThrow).toEqual(expect.any(Function))
+  })
+
+  it('has .numberArray() defined', () => {
+    expect(tsEnv.numberArray).toEqual(expect.any(Function))
+  })
+
+  it('has .numberArrayOrThrow() defined', () => {
+    expect(tsEnv.numberArrayOrThrow).toEqual(expect.any(Function))
+  })
 })

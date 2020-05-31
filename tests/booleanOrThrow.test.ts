@@ -6,10 +6,11 @@ jest.spyOn(booleanModule, 'default')
 jest.spyOn(orThrowModule, 'default')
 
 describe('.booleanOrThrow()', () => {
-  it('does something', () => {
-    process.env.foo = 'true'
-    booleanOrThrow('foo')
+  it('calls the appropriate functions', () => {
+    const key = 'foo'
+    process.env[key] = 'true'
+    booleanOrThrow(key)
     expect(orThrowModule.default).toHaveBeenCalled()
-    expect(booleanModule.default).toHaveBeenCalled()
+    expect(booleanModule.default).toHaveBeenCalledWith(key)
   })
 })
