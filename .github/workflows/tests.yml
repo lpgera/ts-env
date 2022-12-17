@@ -6,11 +6,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Jest
-        uses: stefanoeb/jest-action@1.0.4
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          jestArgs: --coverage
+          node-version: lts/*
+      - run: npm ci
+      - run: npm test
       - name: Coveralls
         uses: coverallsapp/github-action@v1.1.1
         with:
