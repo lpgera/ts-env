@@ -4,7 +4,7 @@ export default <T>(readFunction: ReadFunction<T>, type: string) => {
   return (key: string) => {
     const value = readFunction(key)
 
-    if (!value) {
+    if (value == null || (type === 'string' && value === '')) {
       throw new Error(`Couldn't read ${type} value from process.env.${key}`)
     }
 
