@@ -1,4 +1,4 @@
-import string from '../src/string'
+import string from '../src/string.js'
 
 describe('string()', () => {
   const key = 'foo'

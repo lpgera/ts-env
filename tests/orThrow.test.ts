@@ -1,4 +1,4 @@
-import orThrow from '../src/orThrow'
+import orThrow from '../src/orThrow.js'
 
 describe('orThrow()', () => {
   it('calls the readFunction', () => {

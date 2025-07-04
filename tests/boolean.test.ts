@@ -1,4 +1,4 @@
-import boolean from '../src/boolean'
+import boolean from '../src/boolean.js'
 
 describe('boolean()', () => {
   const key = 'foo'

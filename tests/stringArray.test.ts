@@ -1,4 +1,4 @@
-import stringArray from '../src/stringArray'
+import stringArray from '../src/stringArray.js'
 
 describe('stringArray()', () => {
   const key = 'foo'

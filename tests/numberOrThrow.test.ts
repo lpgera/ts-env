@@ -1,6 +1,6 @@
-import * as numberModule from '../src/number'
-import * as orThrowModule from '../src/orThrow'
-import numberOrThrow from '../src/numberOrThrow'
+import * as numberModule from '../src/number.js'
+import * as orThrowModule from '../src/orThrow.js'
+import numberOrThrow from '../src/numberOrThrow.js'
 
 jest.spyOn(numberModule, 'default')
 jest.spyOn(orThrowModule, 'default')

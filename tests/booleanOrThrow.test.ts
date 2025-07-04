@@ -1,6 +1,6 @@
-import * as booleanModule from '../src/boolean'
-import * as orThrowModule from '../src/orThrow'
-import booleanOrThrow from '../src/booleanOrThrow'
+import * as booleanModule from '../src/boolean.js'
+import * as orThrowModule from '../src/orThrow.js'
+import booleanOrThrow from '../src/booleanOrThrow.js'
 
 jest.spyOn(booleanModule, 'default')
 jest.spyOn(orThrowModule, 'default')

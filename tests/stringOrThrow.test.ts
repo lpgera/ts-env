@@ -1,6 +1,6 @@
-import * as stringModule from '../src/string'
-import * as orThrowModule from '../src/orThrow'
-import stringOrThrow from '../src/stringOrThrow'
+import * as stringModule from '../src/string.js'
+import * as orThrowModule from '../src/orThrow.js'
+import stringOrThrow from '../src/stringOrThrow.js'
 
 jest.spyOn(stringModule, 'default')
 jest.spyOn(orThrowModule, 'default')

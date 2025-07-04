@@ -1,4 +1,4 @@
-import numberArray from '../src/numberArray'
+import numberArray from '../src/numberArray.js'
 
 describe('numberArray()', () => {
   const key = 'foo'

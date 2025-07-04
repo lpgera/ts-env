@@ -1,4 +1,4 @@
-import number from '../src/number'
+import number from '../src/number.js'
 
 describe('number()', () => {
   const key = 'foo'

@@ -1,4 +1,4 @@
-import tsEnv from '../index'
+import tsEnv from '../index.js'
 
 describe('tsEnv', () => {
   it('has .string() defined', () => {
