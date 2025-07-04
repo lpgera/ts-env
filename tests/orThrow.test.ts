@@ -20,7 +20,7 @@ describe('orThrow()', () => {
   it(`throws if the return value of readFunction is undefined`, () => {
     const key = 'foo'
     const readFunction = jest.fn().mockReturnValue(undefined)
-    expect(() => orThrow(readFunction, 'typeString')(key)).toThrowError(
+    expect(() => orThrow(readFunction, 'typeString')(key)).toThrow(
       `Couldn't read typeString value from process.env.${key}`
     )
   })
