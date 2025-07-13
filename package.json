@@ -6,9 +6,11 @@
   "exports": {
     ".": {
       "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.ts",
+      "require": "./dist/cjs/index.js"
     }
   },
+  "main": "./dist/cjs/index.js",
   "devDependencies": {
     "@types/jest": "^30.0.0",
     "@types/node": "^24.0.10",
@@ -20,7 +22,8 @@
     "typescript": "^5.8.3"
   },
   "scripts": {
-    "prepare": "rm -rf dist && tsc",
+    "fix-cjs": "node -e \"require('fs').writeFileSync('./dist/cjs/package.json', '{\\\"type\\\": \\\"commonjs\\\"}')\"",
+    "prepare": "rm -rf dist && tsc && tsc -p tsconfig.cjs.json && npm run fix-cjs",
     "prepublishOnly": "npm run test",
     "postversion": "git push && git push --tags",
     "test": "jest --coverage",
