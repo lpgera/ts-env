@@ -1,6 +1,6 @@
 {
   "name": "@lpgera/ts-env",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "description": "An environment variable reader for TypeScript",
   "type": "module",
   "exports": {
