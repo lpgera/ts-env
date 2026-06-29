@@ -1,16 +1,13 @@
 {
+  "extends": ["@tsconfig/strictest/tsconfig", "@tsconfig/node22/tsconfig"],
+  "exclude": ["dist"],
   "compilerOptions": {
-    "target": "es2022",
-    "module": "nodenext",
-    "lib": ["es2022"],
-    "esModuleInterop": true,
-    "downlevelIteration": true,
-    "strict": true,
-    "noImplicitAny": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "erasableSyntaxOnly": true,
     "declaration": true,
     "outDir": "dist",
-  },
-  "exclude": ["node_modules", "dist", "tests"]
+    "resolveJsonModule": true,
+    "types": ["node"]
+  }
 }

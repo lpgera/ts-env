@@ -1,4 +1,4 @@
-import boolean from './boolean.js'
-import orThrow from './orThrow.js'
+import boolean from './boolean.ts'
+import orThrow from './orThrow.ts'
 
 export default (key: string) => orThrow(boolean, 'boolean')(key)

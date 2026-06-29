@@ -1,4 +1,6 @@
-import stringArray from '../src/stringArray.js'
+import assert from 'node:assert/strict'
+import { beforeEach, describe, it } from 'node:test'
+import stringArray from '../src/stringArray.ts'
 
 describe('stringArray()', () => {
   const key = 'foo'
@@ -12,16 +14,16 @@ describe('stringArray()', () => {
 
   it('reads a comma separated array', () => {
     process.env[key] = '0,1,2,foo bar'
-    expect(stringArray(key)).toEqual(['0', '1', '2', 'foo bar'])
+    assert.deepStrictEqual(stringArray(key), ['0', '1', '2', 'foo bar'])
   })
 
   it('reads a space separated array', () => {
     const separator = ' '
     process.env[key] = '0 1 2 foo bar'
-    expect(stringArray(key, separator)).toEqual(['0', '1', '2', 'foo', 'bar'])
+    assert.deepStrictEqual(stringArray(key, separator), ['0', '1', '2', 'foo', 'bar'])
   })
 
   it('returns undefined if a key is not defined', () => {
-    expect(stringArray(key)).toBeUndefined()
+    assert.strictEqual(stringArray(key), undefined)
   })
 })

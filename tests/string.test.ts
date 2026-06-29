@@ -1,4 +1,6 @@
-import string from '../src/string.js'
+import assert from 'node:assert/strict'
+import { beforeEach, describe, it } from 'node:test'
+import string from '../src/string.ts'
 
 describe('string()', () => {
   const key = 'foo'
@@ -13,10 +15,10 @@ describe('string()', () => {
   it('reads a string value', () => {
     const value = 'bar'
     process.env[key] = value
-    expect(string(key)).toEqual(value)
+    assert.strictEqual(string(key), value)
   })
 
   it('returns undefined if a key is not defined', () => {
-    expect(string(key)).toBeUndefined()
+    assert.strictEqual(string(key), undefined)
   })
 })

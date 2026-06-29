@@ -1,43 +1,45 @@
-import tsEnv from '../index.js'
+import assert from 'node:assert/strict'
+import { describe, it } from 'node:test'
+import tsEnv from '../index.ts'
 
 describe('tsEnv', () => {
   it('has .string() defined', () => {
-    expect(tsEnv.string).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.string, 'function')
   })
 
   it('has .stringOrThrow() defined', () => {
-    expect(tsEnv.stringOrThrow).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.stringOrThrow, 'function')
   })
 
   it('has .boolean() defined', () => {
-    expect(tsEnv.boolean).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.boolean, 'function')
   })
 
   it('has .booleanOrThrow() defined', () => {
-    expect(tsEnv.booleanOrThrow).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.booleanOrThrow, 'function')
   })
 
   it('has .number() defined', () => {
-    expect(tsEnv.number).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.number, 'function')
   })
 
   it('has .numberOrThrow() defined', () => {
-    expect(tsEnv.numberOrThrow).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.numberOrThrow, 'function')
   })
 
   it('has .stringArray() defined', () => {
-    expect(tsEnv.stringArray).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.stringArray, 'function')
   })
 
   it('has .stringArrayOrThrow() defined', () => {
-    expect(tsEnv.stringArrayOrThrow).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.stringArrayOrThrow, 'function')
   })
 
   it('has .numberArray() defined', () => {
-    expect(tsEnv.numberArray).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.numberArray, 'function')
   })
 
   it('has .numberArrayOrThrow() defined', () => {
-    expect(tsEnv.numberArrayOrThrow).toEqual(expect.any(Function))
+    assert.strictEqual(typeof tsEnv.numberArrayOrThrow, 'function')
   })
 })
